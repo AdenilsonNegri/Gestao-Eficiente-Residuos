@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Parceiro</title>
+  <link rel="stylesheet" href="formParceiro.css" />
+</head>
+<body>
+  <section id="acoes">
+    <h2>Seja um Parceiro</h2>
+    <p>Preencha o formulário abaixo para cadastrar seu ponto de coleta.</p>
+
+    <form id="formParceiro">
+      <label>Nome do parceiro:</label>
+      <input type="text" id="nomeParceiro" required />
+
+      <label>Tipo do parceiro:</label>
+      <select id="tipoParceiro" required>
+        <option value="">Selecione</option>
+        <option value="ECO">Ecoponto</option>
+        <option value="COO">Cooperativa</option>
+        <option value="PEV">Ponto de Entrega Voluntária</option>
+      </select>
+
+      <label>Responsável:</label>
+      <input type="text" id="responsavelParceiro" required />
+
+      <label>Telefone:</label>
+      <input type="tel" id="telResponsavel" required />
+
+      <label>E-mail:</label>
+      <input type="email" id="emailResponsavel" required />
+
+      <label>Rua:</label>
+      <input type="text" id="rua" required />
+
+      <label>Número:</label>
+      <input type="number" id="numero" required />
+
+      <label>Bairro:</label>
+      <input type="text" id="bairro" required />
+
+      <fieldset>
+        <legend>Tipos de resíduos aceitos:</legend>
+        <label><input type="checkbox" id="papel" /> Papel</label>
+        <label><input type="checkbox" id="plastico" /> Plástico</label>
+        <label><input type="checkbox" id="vidro" /> Vidro</label>
+        <label><input type="checkbox" id="metal" /> Metal</label>
+        <label><input type="checkbox" id="oleoCozinha" /> Óleo de cozinha</label>
+        <label><input type="checkbox" id="pilhaBateria" /> Pilhas e baterias</label>
+        <label><input type="checkbox" id="eletronico" /> Eletrônicos</label>
+        <label><input type="checkbox" id="roupa" /> Roupas</label>
+        <label><input type="checkbox" id="outros" /> Outros</label>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+      <script src="formParceiro.js"></script>
+
+    </form>
+  </section>
+</body>
+</html>

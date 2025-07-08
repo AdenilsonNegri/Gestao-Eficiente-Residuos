@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("/assets/img/Logotipo_prefeitura_horizontal_positivo.png");
+  background-repeat: no-repeat;
+  background-size: contain;  /* Faz a imagem caber inteira na tela */
+  background-position: center;
+  background-attachment: fixed; /* Faz com que a imagem role com a página */
+  background-color: #95ac8a; /* Cor de fundo por trás da imagem */
+  min-height: 100vh;
+}
+
+header {
+  width:100%;
+  background-color: rgba(46, 125, 50, 0.9);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position:fixed
+}
+
+header .logo img {
+  height: 100px; /* aumenta o tamanho da imagem */
+  margin-right: 20px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo strong {
+  font-size: 2rem; /* aumenta o título */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+} 
+
+nav a {
+  color: rgb(2, 0, 0);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 60px 30px;
+  text-align: left;
+  scroll-margin-top: 120px; /* Compensa o header fixo */
+}
+
+section h2 {
+  font-size: 2.2rem;
+  color: #b9cfba;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+section p, section li {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+section ul {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+section ul li {
+  margin-bottom: 12px;
+}
+
+section ul li a {
+  color: #5c9e5f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.inicio-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaço entre texto e imagem */
+  flex-wrap: wrap; /* Responsivo em telas menores */
+}
+
+.inicio-conteudo .texto {
+  flex:1;
+}
+.icone-reciclagem {
+  width: 80px;
+  height: auto;
+}
+
+.inicio-conteudo p {
+  margin-bottom: 20px;
+}
+
+.inicio {
+  padding: 150px 20px 40px 20px; /* empurra o conteúdo para baixo */
+}
+
+.inicio h1 {
+  font-size: 1.5rem; /* aumenta o título */
+  margin-bottom: 10px;
+  color: #dde4dd;
+}
+
+.inicio p {
+  font-size: 1.3rem; /* aumenta o parágrafo */
+  color: #dbd8d8;
+}
+
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.form-parceiro {
+  margin-top: 20px;
+}
+
+.btn-cadastro {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ddbd2e;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cadastro:hover {
+  background-color: #6b6511;
+}
+
+
+footer {
+  background-color: rgba(46, 125, 50, 0.9);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+
+.logos-footer img {
+  height: 40px;
+  margin-left: 10px;
+}
+/* Destaca visualmente a seção com contraste */
+.highlight-section {
+  background-color: rgba(0, 0, 0, 0.6); /* fundo escuro semi-transparente */
+  border-radius: 12px;
+  padding: 30px;
+  color: #ffffff !important; /* texto branco */
+  transition: all 0.6s ease-in-out;
+}
+
+/* Zoom apenas nos textos */
+.zoom-text h2,
+.zoom-text p,
+.zoom-text li {
+  font-size: 135% !important;
+  transition: font-size 0.5s ease-in-out;
+}
+
+/* Se a seção tiver listas, deixar marcadores visíveis */
+.zoom-text ul {
+  color: #ffffff;
+}
+
+/* Suaviza rolagem para seções */
+section {
+  scroll-margin-top: 150px;
+}

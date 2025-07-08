@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReciclaJoin - Por uma cidade mais limpa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <header>
+    <div class="logo">
+      <img src="../assets/img/Logo_reciclagem.png" alt="Logo Gestão Eficiente de Resíduos">
+      <strong>Gestão Eficiente de Resíduos e Consumo Conciente</strong>
+    </div>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#acoes">Ações</a>
+    </nav>
+  </header>
+
+</section>
+  <section id="inicio" class="inicio">
+  <div class="inicio-conteudo">
+        <div class="inicio-texto">
+        <h1>Juntos por uma Joinville mais limpa e consciente</h1>
+        <p>Gestão eficiente de resíduos e consumo consciente para um futuro sustentável.</p>
+      </div>    
+  </div>
+  </section>
+
+  <section id="objetivos">
+    <h2>Objetivo do Projeto</h2>
+    <p>O projeto ReciclaJoin tem como objetivo promover a educação ambiental, estimular o consumo consciente e apoiar a gestão adequada de resíduos sólidos urbanos. Contribuímos diretamente com os Objetivos de Desenvolvimento Sustentável (ODS) 11 - Cidades e Comunidades Sustentáveis e 12 - Consumo e Produção Responsáveis.</p>
+  </section>
+
+  <section id="impacto">
+    <h2>Impacto</h2>
+    <ul>
+      <li><strong>O ciclo da reciclagem explicado:</strong> Separar, coletar, processar e transformar os resíduos em novos produtos.</li>
+      <li><strong>Como sua ação individual pode transformar a cidade:</strong> Cada embalagem reciclada evita poluição e reduz custos públicos.</li>
+      <li><strong>Impactos da má gestão de resíduos:</strong> Alagamentos, proliferação de doenças e degradação ambiental.</li>
+    </ul>
+  </section>
+
+  <section id="acoes">
+  <h2>Ações</h2>
+  <ul>
+    <li><strong>Doe seus recicláveis:</strong> Entregue seus resíduos a cooperativas locais e ajude a fortalecer a economia circular.</li>
+    <li><strong>Participe de campanhas:</strong> Engaje-se em eventos de limpeza, coleta seletiva e educação ambiental.</li>
+    <li><strong>Seja Parceiro:</strong> Incentive empresas, escolas e condomínios a adotar práticas sustentáveis.</li>
+  </ul>
+
+  <div class="form-parceiro">
+    <p><strong>Quer cadastrar seu ponto de coleta?</strong></p>
+    <a href="../Formulario_Cadastro_Parceiros/FormParceiro.html" class="btn-cadastro">Clique aqui para se registrar como parceiro</a>
+  </div>
+</section>
+
+</section>
+
+
+  <footer>
+    <div>
+      <a href="https://brasil.un.org/pt-br/sdgs" target="_blank">Conheça os ODS da ONU</a>
+    </div>
+    <div class="logos-footer">
+      <img src="/assets/img/Logotipo_Prefeitura_vertical_positivo.png?text=Prefeitura" alt="Prefeitura de Joinville">
+      <img src="/assets/img/logo senai.png?text=Senai" alt="Senai">
+      <img src="/assets/img/logo Lab365.jpg?text=Lab365" alt="Senai">
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const id = this.getAttribute("href").substring(1);
+        const section = document.getElementById(id);
+        if (!section) return;
+
+        // Rolagem suave até o centro da tela
+        const headerHeight = document.querySelector("header").offsetHeight;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        const offset = (window.innerHeight - section.offsetHeight) / 2;
+        const targetPosition = sectionTop - headerHeight + offset;
+
+        window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+});
+
+
+        // Remover destaques anteriores
+        document.querySelectorAll("section").forEach(sec => {
+          sec.classList.remove("highlight-section", "zoom-text");
+        });
+
+        // Adicionar destaque à seção atual
+        section.classList.add("highlight-section", "zoom-text");
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
